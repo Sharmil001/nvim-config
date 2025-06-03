@@ -28,7 +28,18 @@ keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  
 keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
 
+-- Cycle tabs with <Tab>
+-- keymap.set("n", "<Tab>", function()
+--   local current = vim.fn.tabpagenr()
+--   local total = vim.fn.tabpagenr("$")
+--   if current == total then
+--     vim.cmd("tabfirst")
+--   else
+--     vim.cmd("tabnext")
+--   end
+-- end, { desc = "Cycle through tabs in a loop" })
+
 -- code folding management
-keymap.set("n", "<leader>z", "za", { desc = "Toggle fold" })
-keymap.set("n", "<leader>zm", "zM", { desc = "Close all folds" })
-keymap.set("n", "<leader>zr", "zR", { desc = "Open all folds" })
+keymap.set("n", "<leader>zz", "za", { desc = "Toggle fold" })
+keymap.set("n", "<leader>zc", "zM", { desc = "Close all folds" })
+keymap.set("n", "<leader>ze", "zR", { desc = "Open all folds" })

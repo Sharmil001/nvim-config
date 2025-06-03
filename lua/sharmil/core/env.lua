@@ -1,6 +1,3 @@
-require("sharmil.core.options")
-require("sharmil.core.keymaps")
-
 local OriginalPath = vim.fn.getenv("PATH")
 local pathAppended = false
 local mygroup = vim.api.nvim_create_augroup("sharmil", { clear = true })
