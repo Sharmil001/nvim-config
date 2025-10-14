@@ -1,3 +1,5 @@
 require("sharmil.core.options")
 require("sharmil.core.keymaps")
 -- require("sharmil.core.env")
+local pyenv_version = vim.fn.system("pyenv version-name"):gsub("%s+", "")
+vim.g.python3_host_prog = string.format("%s/.pyenv/versions/%s/bin/python", os.getenv("HOME"), pyenv_version)
